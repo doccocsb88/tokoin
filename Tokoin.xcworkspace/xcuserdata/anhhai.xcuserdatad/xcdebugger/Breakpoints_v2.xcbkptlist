@@ -18,83 +18,6 @@
             endingLineNumber = "33"
             landmarkName = "request(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F82B7EB2-7C9A-492D-BA35-46EDCF66970A - 7a210f6396a2f052"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;A, Alamofire.AFError&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;A&gt;) -&gt; RxSwift.Disposable in static Tokoin.APIClient.(request in _4A21FF70E863B5E5073D44BB3CFFD9C1)&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(Alamofire.URLRequestConvertible) -&gt; RxSwift.Observable&lt;A&gt;"
-                  moduleName = "Tokoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhhai/Desktop/Tokoin/Tokoin/Apis/APIClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "783">
-               </Location>
-               <Location
-                  uuid = "F82B7EB2-7C9A-492D-BA35-46EDCF66970A - 7a210f6396a2f052"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;A, Alamofire.AFError&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;A&gt;) -&gt; RxSwift.Disposable in static Tokoin.APIClient.(request in _4A21FF70E863B5E5073D44BB3CFFD9C1)&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(Alamofire.URLRequestConvertible) -&gt; RxSwift.Observable&lt;A&gt;"
-                  moduleName = "Tokoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhhai/Desktop/Tokoin/Tokoin/Apis/APIClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "989">
-               </Location>
-               <Location
-                  uuid = "F82B7EB2-7C9A-492D-BA35-46EDCF66970A - 7a210f6396a2f052"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;A, Alamofire.AFError&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;A&gt;) -&gt; RxSwift.Disposable in static Tokoin.APIClient.(request in _4A21FF70E863B5E5073D44BB3CFFD9C1)&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(Alamofire.URLRequestConvertible) -&gt; RxSwift.Observable&lt;A&gt;"
-                  moduleName = "Tokoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhhai/Desktop/Tokoin/Tokoin/Apis/APIClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "1258">
-               </Location>
-               <Location
-                  uuid = "F82B7EB2-7C9A-492D-BA35-46EDCF66970A - 7a210f6396a2f052"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;A, Alamofire.AFError&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;A&gt;) -&gt; RxSwift.Disposable in static Tokoin.APIClient.(request in _4A21FF70E863B5E5073D44BB3CFFD9C1)&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(Alamofire.URLRequestConvertible) -&gt; RxSwift.Observable&lt;A&gt;"
-                  moduleName = "Tokoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhhai/Desktop/Tokoin/Tokoin/Apis/APIClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "1505">
-               </Location>
-               <Location
-                  uuid = "F82B7EB2-7C9A-492D-BA35-46EDCF66970A - 7a210f6396a2f052"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;A, Alamofire.AFError&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;A&gt;) -&gt; RxSwift.Disposable in static Tokoin.APIClient.(request in _4A21FF70E863B5E5073D44BB3CFFD9C1)&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(Alamofire.URLRequestConvertible) -&gt; RxSwift.Observable&lt;A&gt;"
-                  moduleName = "Tokoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhhai/Desktop/Tokoin/Tokoin/Apis/APIClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "1770">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -143,38 +66,70 @@
             endingLineNumber = "21"
             landmarkName = "request(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1563DEFE-18CB-42AD-9111-E78C1F2A4A6A - 298eb87e553b4e6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Tokoin.APIClient.(request in _4A21FF70E863B5E5073D44BB3CFFD9C1)&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(Alamofire.URLRequestConvertible) -&gt; RxSwift.Observable&lt;A&gt;"
-                  moduleName = "Tokoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhhai/Desktop/Tokoin/Tokoin/Apis/APIClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "47">
-               </Location>
-               <Location
-                  uuid = "1563DEFE-18CB-42AD-9111-E78C1F2A4A6A - 55b87d1adecde65b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;A&gt;) -&gt; RxSwift.Disposable in static Tokoin.APIClient.(request in _4A21FF70E863B5E5073D44BB3CFFD9C1)&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(Alamofire.URLRequestConvertible) -&gt; RxSwift.Observable&lt;A&gt;"
-                  moduleName = "Tokoin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhhai/Desktop/Tokoin/Tokoin/Apis/APIClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D2126A7-9554-4CA2-9128-83F5C1480B38"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tokoin/Article/Detail/Router/DetailArticleRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "showWebView(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9EFDDA26-4967-4A34-8D61-E52E28C00E14"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tokoin/Article/Detail/View/DetailArticleViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "tappedReadMore(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2350B10-E8D1-480E-9092-C36EBDE516BE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tokoin/Article/Detail/Interactor/DetailArticleInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "readMore(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "595D7663-1DEA-4E14-BA15-816A22C52855"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tokoin/Article/Detail/Router/DetailArticleRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "showWebView(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

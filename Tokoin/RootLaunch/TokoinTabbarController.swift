@@ -15,9 +15,10 @@ class TokoinTabbarController: UITabBarController {
         let router = ListArticleBuilder().build()
         
         let navigationController = UINavigationController()
-        navigationController.viewControllers = [router.viewController, UIViewController()]
+        navigationController.viewControllers = [router.viewController]
         
-        return [router.viewController]
+        let profileRouter = ProfileBuilder().build()
+        return [navigationController, UIViewController(), profileRouter.viewController]
     }()
     
     override func viewDidLoad() {

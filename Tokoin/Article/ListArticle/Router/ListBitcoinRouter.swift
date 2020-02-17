@@ -9,13 +9,15 @@
 import Foundation
 import UIKit
 protocol ListArticleRouterInput: class {
-    func showArticleDetailView()
+    func showArticleDetailView(with artitle: Article)
 }
 class ListArticleRouter: ListArticleRouterInput {
     weak var viewController: ListArticleViewController!
     var interactor: ListArticleInteractor!
     
-    func showArticleDetailView() {
+    func showArticleDetailView(with artitle: Article) {
+        let router = DetailArticleBuilder().build(with: artitle)
         
+        viewController.navigationController?.pushViewController(router.viewController, animated: true)
     }
 }

@@ -15,11 +15,28 @@ protocol ListArticleInput: class {
 
 protocol ListArticleOutput: class {
     func viewDidLoad()
+    func didSelectArticle(_ article: Article)
 }
 
 class ListArticleViewController: UIViewController {
     weak var output: ListArticleOutput?
     
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.forAutoLayout()
+        
+        return scrollView
+    }()
+    private lazy var contentView: UIView = {
+        let view = UIView()
+        view.forAutoLayout()
+        return view
+    }()
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        
+        return stackView
+    }()
     var tableView: UITableView!
     var data:[Article] = []
     
@@ -40,6 +57,10 @@ class ListArticleViewController: UIViewController {
     func setupViews() {
         view.backgroundColor = .white
         initTableView()
+    }
+    
+    func setupFilterView() {
+//        view.addSubview
     }
     
     func initTableView() {
@@ -90,5 +111,8 @@ extension ListArticleViewController: UITableViewDelegate, UITableViewDataSource 
         return UITableViewCell()
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = data[indexPath.row]
+        output?.didSelectArticle(article)
+    }
 }

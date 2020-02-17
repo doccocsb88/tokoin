@@ -8,8 +8,13 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class ArticleViewCell: UITableViewCell {
+    enum Constants {
+        static let defaultMargin: CGFloat = 8
+        static let smallMargin: CGFloat = 4
+    }
     
     var thumbnail: UIImageView!
     private lazy var titleLabel: UILabel = {
@@ -42,15 +47,15 @@ class ArticleViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             thumbnail.trailingAnchor.constraint(equalTo: trailingAnchor),
             thumbnail.centerYAnchor.constraint(equalTo: centerYAnchor),
-            thumbnail.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            thumbnail.topAnchor.constraint(equalTo: topAnchor, constant: Constants.smallMargin),
             thumbnail.widthAnchor.constraint(equalToConstant: 100)
         ])
         
         addSubview(titleLabel)
         NSLayoutConstraint.activate([
-            titleLabel.trailingAnchor.constraint(equalTo: thumbnail.leadingAnchor, constant: 8),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            titleLabel.trailingAnchor.constraint(equalTo: thumbnail.leadingAnchor, constant: Constants.defaultMargin),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.defaultMargin),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Constants.defaultMargin),
         ])
         
         addSubview(descriptionLabel)
@@ -63,7 +68,9 @@ class ArticleViewCell: UITableViewCell {
     }
     
     func updateContent(with article: Article) {
-        thumbnail.loadImage(with: article.urlToImage)
+        if let urlToImage = article.urlToImage, let imageURL = URL(string: urlToImage) {
+            thumbnail.sd_setImage(with: imageURL)
+        }
         titleLabel.text = article.title
         descriptionLabel.text = article.description
     }

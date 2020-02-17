@@ -26,6 +26,15 @@
 		2EE6741B23FA67EE00A913D2 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6741A23FA67EE00A913D2 /* Article.swift */; };
 		2EE6741D23FA9ADC00A913D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE6741C23FA9ADC00A913D2 /* Main.storyboard */; };
 		2EE6741F23FAB09A00A913D2 /* ArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6741E23FAB09A00A913D2 /* ArticleResponse.swift */; };
+		2EE6742A23FAC70100A913D2 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6742923FAC70100A913D2 /* DetailArticleViewController.swift */; };
+		2EE6742C23FAC78900A913D2 /* DetailArticleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6742B23FAC78900A913D2 /* DetailArticleInteractor.swift */; };
+		2EE6742E23FAC7E200A913D2 /* DetailArticleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6742D23FAC7E200A913D2 /* DetailArticleRouter.swift */; };
+		2EE6743023FAC84200A913D2 /* DetailArticleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6742F23FAC84200A913D2 /* DetailArticleBuilder.swift */; };
+		2EE6743323FADA9D00A913D2 /* TokoinWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6743223FADA9D00A913D2 /* TokoinWebview.swift */; };
+		2EE6743A23FAEC4000A913D2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6743923FAEC4000A913D2 /* ProfileViewController.swift */; };
+		2EE6743C23FAECDC00A913D2 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6743B23FAECDC00A913D2 /* ProfileRouter.swift */; };
+		2EE6743E23FAED4000A913D2 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6743D23FAED4000A913D2 /* ProfileInteractor.swift */; };
+		2EE6744023FAED8C00A913D2 /* ProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6743F23FAED8C00A913D2 /* ProfileBuilder.swift */; };
 		78C6D277EA69EBB3B6BF9ECD /* Pods_Tokoin_TokoinUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7F768CD105E7900BF2B186 /* Pods_Tokoin_TokoinUITests.framework */; };
 		9D5DD69EBE62B89A6466DE38 /* Pods_TokoinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B8C54A9837A1F5C9C09574 /* Pods_TokoinTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +83,15 @@
 		2EE6741A23FA67EE00A913D2 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		2EE6741C23FA9ADC00A913D2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2EE6741E23FAB09A00A913D2 /* ArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponse.swift; sourceTree = "<group>"; };
+		2EE6742923FAC70100A913D2 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
+		2EE6742B23FAC78900A913D2 /* DetailArticleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleInteractor.swift; sourceTree = "<group>"; };
+		2EE6742D23FAC7E200A913D2 /* DetailArticleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleRouter.swift; sourceTree = "<group>"; };
+		2EE6742F23FAC84200A913D2 /* DetailArticleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleBuilder.swift; sourceTree = "<group>"; };
+		2EE6743223FADA9D00A913D2 /* TokoinWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokoinWebview.swift; sourceTree = "<group>"; };
+		2EE6743923FAEC4000A913D2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2EE6743B23FAECDC00A913D2 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		2EE6743D23FAED4000A913D2 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		2EE6743F23FAED8C00A913D2 /* ProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBuilder.swift; sourceTree = "<group>"; };
 		3984062743F6D8D072F23FB0 /* Pods-Tokoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokoin.debug.xcconfig"; path = "Target Support Files/Pods-Tokoin/Pods-Tokoin.debug.xcconfig"; sourceTree = "<group>"; };
 		88DE0474D22193A2E3C1C49A /* Pods-TokoinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokoinTests.debug.xcconfig"; path = "Target Support Files/Pods-TokoinTests/Pods-TokoinTests.debug.xcconfig"; sourceTree = "<group>"; };
 		972D34B71FD5F0822A9DD19A /* Pods-TokoinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokoinTests.release.xcconfig"; path = "Target Support Files/Pods-TokoinTests/Pods-TokoinTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,10 +167,12 @@
 		2E957C6823FA2A5C00E81B70 /* Tokoin */ = {
 			isa = PBXGroup;
 			children = (
+				2EE6743423FAEBAC00A913D2 /* Profile */,
+				2EE6743123FADA8B00A913D2 /* Common */,
+				2EE6742323FAC6B600A913D2 /* Article */,
 				2EE6741323FA40B100A913D2 /* RootLaunch */,
 				2EE6741023FA3E3400A913D2 /* Model */,
 				2EE6740D23FA3C4600A913D2 /* Utils */,
-				2EE6740023FA2FEB00A913D2 /* Bitcoin */,
 				2EE673FB23FA2D2100A913D2 /* Apis */,
 				2E957C6923FA2A5C00E81B70 /* AppDelegate.swift */,
 				2EE6741C23FA9ADC00A913D2 /* Main.storyboard */,
@@ -191,7 +211,7 @@
 			path = Apis;
 			sourceTree = "<group>";
 		};
-		2EE6740023FA2FEB00A913D2 /* Bitcoin */ = {
+		2EE6740023FA2FEB00A913D2 /* ListArticle */ = {
 			isa = PBXGroup;
 			children = (
 				2EE6740423FA301C00A913D2 /* Router */,
@@ -199,7 +219,7 @@
 				2EE6740223FA300800A913D2 /* Interactor */,
 				2EE6740123FA300000A913D2 /* View */,
 			);
-			path = Bitcoin;
+			path = ListArticle;
 			sourceTree = "<group>";
 		};
 		2EE6740123FA300000A913D2 /* View */ = {
@@ -258,6 +278,109 @@
 				2EE6741423FA40C900A913D2 /* TokoinTabbarController.swift */,
 			);
 			path = RootLaunch;
+			sourceTree = "<group>";
+		};
+		2EE6742323FAC6B600A913D2 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6740023FA2FEB00A913D2 /* ListArticle */,
+				2EE6742423FAC6C500A913D2 /* Detail */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		2EE6742423FAC6C500A913D2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6742823FAC6E200A913D2 /* View */,
+				2EE6742723FAC6DC00A913D2 /* Interactor */,
+				2EE6742623FAC6D400A913D2 /* Builder */,
+				2EE6742523FAC6CD00A913D2 /* Router */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2EE6742523FAC6CD00A913D2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6742D23FAC7E200A913D2 /* DetailArticleRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2EE6742623FAC6D400A913D2 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6742F23FAC84200A913D2 /* DetailArticleBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		2EE6742723FAC6DC00A913D2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6742B23FAC78900A913D2 /* DetailArticleInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2EE6742823FAC6E200A913D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6742923FAC70100A913D2 /* DetailArticleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EE6743123FADA8B00A913D2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6743223FADA9D00A913D2 /* TokoinWebview.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2EE6743423FAEBAC00A913D2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6743823FAEBC600A913D2 /* Interactor */,
+				2EE6743723FAEBBF00A913D2 /* Builder */,
+				2EE6743623FAEBB800A913D2 /* Router */,
+				2EE6743523FAEBB200A913D2 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2EE6743523FAEBB200A913D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6743923FAEC4000A913D2 /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EE6743623FAEBB800A913D2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6743B23FAECDC00A913D2 /* ProfileRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2EE6743723FAEBBF00A913D2 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6743F23FAED8C00A913D2 /* ProfileBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		2EE6743823FAEBC600A913D2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2EE6743D23FAED4000A913D2 /* ProfileInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		FDA08701D1DB5B363689EB5A /* Frameworks */ = {
@@ -512,13 +635,22 @@
 				2EE6740623FA309C00A913D2 /* ListBitcoinBuilder.swift in Sources */,
 				2EE6741523FA40C900A913D2 /* TokoinTabbarController.swift in Sources */,
 				2EE6740F23FA3C6000A913D2 /* ViewUtils.swift in Sources */,
+				2EE6744023FAED8C00A913D2 /* ProfileBuilder.swift in Sources */,
+				2EE6743023FAC84200A913D2 /* DetailArticleBuilder.swift in Sources */,
+				2EE6743C23FAECDC00A913D2 /* ProfileRouter.swift in Sources */,
 				2EE6741223FA3E4D00A913D2 /* BitcoinViewCell.swift in Sources */,
+				2EE6742C23FAC78900A913D2 /* DetailArticleInteractor.swift in Sources */,
 				2E957C6A23FA2A5C00E81B70 /* AppDelegate.swift in Sources */,
 				2EE6740C23FA316F00A913D2 /* ListBitcoinViewController.swift in Sources */,
 				2EE6741B23FA67EE00A913D2 /* Article.swift in Sources */,
+				2EE6743A23FAEC4000A913D2 /* ProfileViewController.swift in Sources */,
 				2EE6741F23FAB09A00A913D2 /* ArticleResponse.swift in Sources */,
 				2EE6741723FA5FEA00A913D2 /* APIConfiguration.swift in Sources */,
+				2EE6743E23FAED4000A913D2 /* ProfileInteractor.swift in Sources */,
 				2EE6740A23FA313D00A913D2 /* ListBitcoinInteractor.swift in Sources */,
+				2EE6742A23FAC70100A913D2 /* DetailArticleViewController.swift in Sources */,
+				2EE6743323FADA9D00A913D2 /* TokoinWebview.swift in Sources */,
+				2EE6742E23FAC7E200A913D2 /* DetailArticleRouter.swift in Sources */,
 				2EE673FD23FA2D6A00A913D2 /* Constants.swift in Sources */,
 				2EE6740823FA30EF00A913D2 /* ListBitcoinRouter.swift in Sources */,
 				2EE6741923FA60A900A913D2 /* APIClient.swift in Sources */,

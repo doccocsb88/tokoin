@@ -18,6 +18,10 @@ class ListArticleInteractor: ListArticleOutput {
         fetchListArticle()
     }
     
+    func didSelectArticle(_ article: Article) {
+        router.showArticleDetailView(with: article)
+    }
+    
     func fetchListArticle() {
         APIClient.fetchListArtice(with: "bitcoin").observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] response in
             print("aaaa")
