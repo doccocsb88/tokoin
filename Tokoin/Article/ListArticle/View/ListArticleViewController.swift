@@ -62,6 +62,7 @@ class ListArticleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Tokoin"
         output?.viewDidLoad()
         setupViews()
         if sections.count > 0 {
@@ -71,7 +72,6 @@ class ListArticleViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "Tokoin"
     }
     
     func setupViews() {
