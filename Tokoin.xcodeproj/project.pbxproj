@@ -37,6 +37,10 @@
 		2EE6744423FB080F00A913D2 /* InfoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6744323FB080F00A913D2 /* InfoItemView.swift */; };
 		2EE6744623FB0ADB00A913D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6744523FB0ADB00A913D2 /* User.swift */; };
 		2EE6744823FB98AA00A913D2 /* LoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6744723FB98AA00A913D2 /* LoadMoreView.swift */; };
+		2EEFECF723FBBD9D002D438A /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEFECF623FBBD9D002D438A /* Preference.swift */; };
+		2EEFECF923FBC549002D438A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEFECF823FBC549002D438A /* RegisterViewController.swift */; };
+		2EFCFFD623FBA94E0017FEF7 /* Tokoin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EFCFFD423FBA94E0017FEF7 /* Tokoin.xcdatamodeld */; };
+		2EFCFFD823FBAD280017FEF7 /* TokoinCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFCFFD723FBAD280017FEF7 /* TokoinCoreData.swift */; };
 		78C6D277EA69EBB3B6BF9ECD /* Pods_Tokoin_TokoinUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7F768CD105E7900BF2B186 /* Pods_Tokoin_TokoinUITests.framework */; };
 		9D5DD69EBE62B89A6466DE38 /* Pods_TokoinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B8C54A9837A1F5C9C09574 /* Pods_TokoinTests.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +100,10 @@
 		2EE6744323FB080F00A913D2 /* InfoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItemView.swift; sourceTree = "<group>"; };
 		2EE6744523FB0ADB00A913D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2EE6744723FB98AA00A913D2 /* LoadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreView.swift; sourceTree = "<group>"; };
+		2EEFECF623FBBD9D002D438A /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		2EEFECF823FBC549002D438A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2EFCFFD523FBA94E0017FEF7 /* Tokoin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tokoin.xcdatamodel; sourceTree = "<group>"; };
+		2EFCFFD723FBAD280017FEF7 /* TokoinCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokoinCoreData.swift; sourceTree = "<group>"; };
 		3984062743F6D8D072F23FB0 /* Pods-Tokoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokoin.debug.xcconfig"; path = "Target Support Files/Pods-Tokoin/Pods-Tokoin.debug.xcconfig"; sourceTree = "<group>"; };
 		88DE0474D22193A2E3C1C49A /* Pods-TokoinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokoinTests.debug.xcconfig"; path = "Target Support Files/Pods-TokoinTests/Pods-TokoinTests.debug.xcconfig"; sourceTree = "<group>"; };
 		972D34B71FD5F0822A9DD19A /* Pods-TokoinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokoinTests.release.xcconfig"; path = "Target Support Files/Pods-TokoinTests/Pods-TokoinTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +191,7 @@
 				2E957C7223FA2A5F00E81B70 /* Assets.xcassets */,
 				2E957C7423FA2A5F00E81B70 /* LaunchScreen.storyboard */,
 				2E957C7723FA2A5F00E81B70 /* Info.plist */,
+				2EFCFFD423FBA94E0017FEF7 /* Tokoin.xcdatamodeld */,
 			);
 			path = Tokoin;
 			sourceTree = "<group>";
@@ -210,6 +219,7 @@
 			children = (
 				2EE6741623FA5FEA00A913D2 /* APIConfiguration.swift */,
 				2EE6741823FA60A900A913D2 /* APIClient.swift */,
+				2EFCFFD723FBAD280017FEF7 /* TokoinCoreData.swift */,
 			);
 			path = Apis;
 			sourceTree = "<group>";
@@ -273,6 +283,7 @@
 				2EE6741A23FA67EE00A913D2 /* Article.swift */,
 				2EE6741E23FAB09A00A913D2 /* ArticleResponse.swift */,
 				2EE6744523FB0ADB00A913D2 /* User.swift */,
+				2EEFECF623FBBD9D002D438A /* Preference.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,6 +372,7 @@
 			children = (
 				2EE6743923FAEC4000A913D2 /* ProfileViewController.swift */,
 				2EE6744323FB080F00A913D2 /* InfoItemView.swift */,
+				2EEFECF823FBC549002D438A /* RegisterViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -646,6 +658,7 @@
 				2EE6743023FAC84200A913D2 /* DetailArticleBuilder.swift in Sources */,
 				2EE6743C23FAECDC00A913D2 /* ProfileRouter.swift in Sources */,
 				2EE6741223FA3E4D00A913D2 /* ArticleViewCell.swift in Sources */,
+				2EFCFFD823FBAD280017FEF7 /* TokoinCoreData.swift in Sources */,
 				2EE6742C23FAC78900A913D2 /* DetailArticleInteractor.swift in Sources */,
 				2E957C6A23FA2A5C00E81B70 /* AppDelegate.swift in Sources */,
 				2EE6740C23FA316F00A913D2 /* ListBitcoinViewController.swift in Sources */,
@@ -660,7 +673,10 @@
 				2EE6743323FADA9D00A913D2 /* TokoinWebview.swift in Sources */,
 				2EE6742E23FAC7E200A913D2 /* DetailArticleRouter.swift in Sources */,
 				2EE6740823FA30EF00A913D2 /* ListBitcoinRouter.swift in Sources */,
+				2EEFECF923FBC549002D438A /* RegisterViewController.swift in Sources */,
 				2EE6741923FA60A900A913D2 /* APIClient.swift in Sources */,
+				2EFCFFD623FBA94E0017FEF7 /* Tokoin.xcdatamodeld in Sources */,
+				2EEFECF723FBBD9D002D438A /* Preference.swift in Sources */,
 				2EE6744623FB0ADB00A913D2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -982,6 +998,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2EFCFFD423FBA94E0017FEF7 /* Tokoin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2EFCFFD523FBA94E0017FEF7 /* Tokoin.xcdatamodel */,
+			);
+			currentVersion = 2EFCFFD523FBA94E0017FEF7 /* Tokoin.xcdatamodel */;
+			path = Tokoin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2E957C5E23FA2A5C00E81B70 /* Project object */;
 }

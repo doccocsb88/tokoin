@@ -73,14 +73,7 @@ class ProfileViewController: UIViewController {
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
         
-        let user = User(username: "vuvanhai")
-        let itemView = InfoItemView()
-        itemView.updateView(prefix: "Username", content: user.username)
-        itemView.forAutoLayout()
-        stackView.addArrangedSubview(itemView)
     }
-    
-    
 }
 
 extension ProfileViewController: ProfileViewInput {

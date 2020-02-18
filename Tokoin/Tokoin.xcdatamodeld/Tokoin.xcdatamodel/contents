@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Preference" representedClassName="Preference" syncable="YES">
+        <attribute name="section" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="preferences" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Preference"/>
+    </entity>
+    <elements>
+        <element name="Preference" positionX="16.1953125" positionY="-1641.4765625" width="128" height="58"/>
+        <element name="User" positionX="-280.66796875" positionY="-1676.5546875" width="128" height="73"/>
+    </elements>
+</model>

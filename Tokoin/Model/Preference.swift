@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Preference.swift
 //  Tokoin
 //
 //  Created by Anh Hai on 2/18/20.
@@ -9,8 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(User)
-class User: NSManagedObject {
-    @NSManaged var username: String
-    @NSManaged var preferences: NSSet?
+@objc(Preference)
+class Preference: NSManagedObject {
+    @NSManaged var section: String
 }
