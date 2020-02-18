@@ -21,6 +21,8 @@ struct K {
         static let email = "email"
         static let apiKey  = "apiKey"
         static let query = "q"
+        static let country = "country"
+        static let category = "category"
     }
 }
 
@@ -35,6 +37,18 @@ enum ContentType: String {
     case json = "application/json"
 }
 
+enum ApiError: Error {
+    case forbidden              //Status code 403
+    case notFound               //Status code 404
+    case conflict               //Status code 409
+    case internalServerError    //Status code 500
+}
+
+enum ResponseStatus: String {
+    case ok = "ok"
+    case error = "error"
+}
+
 protocol APIConfiguration: URLRequestConvertible {
     var method: HTTPMethod { get }
     var path: String { get }
@@ -43,17 +57,13 @@ protocol APIConfiguration: URLRequestConvertible {
 
 enum APIRouter: URLRequestConvertible {
     
-    case login(email:String, password:String)
-    case posts
-    case post(id: Int)
-    case fetchNews(type: String)
+    case fetchNews(type: String, page: Int?, pageSize: Int?)
+    case fetchHeadLine(country: String, category: String?, page: Int?, pageSize: Int?)
     
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
         switch self {
-        case .login:
-            return .post
-        case .posts, .post, .fetchNews:
+        case .fetchNews, .fetchHeadLine:
             return .get
         }
     }
@@ -61,27 +71,35 @@ enum APIRouter: URLRequestConvertible {
     // MARK: - Path
     private var path: String {
         switch self {
-        case .login:
-            return "/login"
-        case .posts:
-            return "/posts"
-        case .post(let id):
-            return "/posts/\(id)"
-        case .fetchNews(_):
-            return "everything?q=bitcoin&from=2020-01-17&sortBy=publishedAt&apiKey=094158bde6d640f3890cc4ac22d478d5"
+        case .fetchNews(let keyword, let page, let pageSize):
+            var newsPath =  "everything?q=\(keyword)"
+            if let page = page {
+                newsPath.append("&page=\(page)")
+            }
+            if let pageSize = pageSize {
+                newsPath.append("&pageSize=\(pageSize)")
+            }
+            newsPath.append("&apiKey=\(K.APIKey)")
+            return newsPath
+        case .fetchHeadLine(let country, let category, let page, let pageSize):
+            var headLinePath = "top-headlines?country=\(country)"
+            if let cat = category {
+                headLinePath.append("&category=\(cat)")
+            }
+            if let page = page {
+                headLinePath.append("&page=\(page)")
+            }
+            if let pageSize = pageSize {
+                headLinePath.append("&pageSize=\(pageSize)")
+            }
+            headLinePath.append("&apiKey=\(K.APIKey)")
+            return headLinePath
         }
     }
     
     // MARK: - Parameters
     private var parameters: Parameters? {
-        switch self {
-        case .login(let email, let password):
-            return [K.APIParameterKey.email: email, K.APIParameterKey.password: password]
-        case .fetchNews(let type):
-            return [K.APIParameterKey.query: type]
-        case .posts, .post:
-            return nil
-        }
+        return nil
     }
     
     // MARK: - URLRequestConvertible
@@ -91,20 +109,21 @@ enum APIRouter: URLRequestConvertible {
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
      
         //                     HTTP Method
-                            urlRequest.httpMethod = method.rawValue
+        urlRequest.httpMethod = method.rawValue
                             
         //                     Common Headers
-                            urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
-                            urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
-                            urlRequest.setValue(K.APIKey, forHTTPHeaderField: "X-Api-Key")
+        urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
+        urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
+        urlRequest.setValue(K.APIKey, forHTTPHeaderField: "X-Api-Key")
         //                     Parameters
-                if let parameters = parameters {
-                    do {
-                            urlRequest.httpBody =  try JSONSerialization.data(withJSONObject: parameters, options: [])
-                    } catch {
-                        throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
-                    }
-                }
+        if let parameters = parameters {
+            do {
+                urlRequest.httpBody =  try JSONSerialization.data(withJSONObject: parameters, options: [])
+            } catch {
+                throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
+                
+            }
+        }
                  
         return urlRequest
     }
@@ -114,5 +133,6 @@ enum APIRouter: URLRequestConvertible {
        return "\(K.ProductionServer.baseURL)\(path)"
     }
 }
+
 
 

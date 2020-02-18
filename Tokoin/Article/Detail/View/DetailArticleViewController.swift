@@ -104,6 +104,11 @@ class DetailArticleViewController: UIViewController {
         bindDataToView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func setupViews() {
         view.backgroundColor  = .white
         setupScrollView()

@@ -20,6 +20,8 @@ class ArticleViewCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.forAutoLayout()
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 20)
         return label
     }()
     
@@ -27,6 +29,7 @@ class ArticleViewCell: UITableViewCell {
         let label = UILabel()
         label.forAutoLayout()
         label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
     
@@ -40,30 +43,31 @@ class ArticleViewCell: UITableViewCell {
     }
     
     func setupViews() {
-        contentView.backgroundColor = .red
+        contentView.backgroundColor = .white
         thumbnail = UIImageView()
         thumbnail.forAutoLayout()
         addSubview(thumbnail)
         NSLayoutConstraint.activate([
-            thumbnail.trailingAnchor.constraint(equalTo: trailingAnchor),
+            rightAnchor.constraint(equalTo: thumbnail.rightAnchor, constant: 8),
             thumbnail.centerYAnchor.constraint(equalTo: centerYAnchor),
             thumbnail.topAnchor.constraint(equalTo: topAnchor, constant: Constants.smallMargin),
-            thumbnail.widthAnchor.constraint(equalToConstant: 100)
+            thumbnail.widthAnchor.constraint(equalTo: thumbnail.heightAnchor, multiplier: 1)
         ])
         
         addSubview(titleLabel)
         NSLayoutConstraint.activate([
-            titleLabel.trailingAnchor.constraint(equalTo: thumbnail.leadingAnchor, constant: Constants.defaultMargin),
+            thumbnail.leftAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: Constants.defaultMargin),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.defaultMargin),
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Constants.defaultMargin),
+            titleLabel.heightAnchor.constraint(lessThanOrEqualToConstant: 50)
         ])
         
         addSubview(descriptionLabel)
         NSLayoutConstraint.activate([
-            descriptionLabel.rightAnchor.constraint(equalTo: thumbnail.leftAnchor, constant: 8),
+            thumbnail.leftAnchor.constraint(equalTo: descriptionLabel.rightAnchor, constant: 8),
             descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
-            descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 4)
+            bottomAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 4)
         ])
     }
     

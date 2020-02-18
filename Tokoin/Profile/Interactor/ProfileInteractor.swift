@@ -12,4 +12,8 @@ class ProfileInteractor: ProfileViewOutput {
     
     var view: ProfileViewInput?
     
+    func viewDidLoad() {
+        let user = User(username: "vuvanhai")
+        view?.didLoadContent(with: user)
+    }
 }

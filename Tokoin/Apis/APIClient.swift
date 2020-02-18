@@ -11,10 +11,14 @@ import RxSwift
 
 
 class APIClient {
-    static func fetchListArtice(with type: String) -> Observable<ArticleResponse> {
-        return request(APIRouter.fetchNews(type: type).getAPIURL())
+    static func fetchListArtice(with type: String, page: Int? = nil, pageSize: Int? = nil) -> Observable<ArticleResponse> {
+        return request(APIRouter.fetchNews(type: type, page: page, pageSize: pageSize).getAPIURL())
     }
 
+    static func fetchHeadLine(in country: String = "us", from category: String? = nil, page: Int? = nil, pageSize: Int? = nil) -> Observable<ArticleResponse> {
+        let requestURL = APIRouter.fetchHeadLine(country: country, category: category, page: page, pageSize: pageSize).getAPIURL()
+        return request(requestURL)
+    }
     
     private static func request<T: Codable> (_ urlConvertible: URLRequestConvertible) -> Observable<T> {
         //Create an RxSwift observable, which will be the one to call the request when subscribed to

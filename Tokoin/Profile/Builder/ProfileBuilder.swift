@@ -13,11 +13,9 @@ class ProfileBuilder {
         let router = ProfileRouter()
         let viewController = ProfileViewController()
         let interactor = ProfileInteractor()
-        
-        router.viewController = viewController
         interactor.view = viewController
         viewController.output = interactor
-        
+        router.viewController = viewController
         return router
     }
 }

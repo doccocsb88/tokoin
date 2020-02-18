@@ -12,11 +12,11 @@ class ListArticleBuilder {
     init() {
     }
     
-    func build() -> ListArticleRouter {
+    func build(viewType: ViewType = .headLine, with sections: [String] = []) -> ListArticleRouter {
         let router: ListArticleRouter = ListArticleRouter()
 
-        let interactor = ListArticleInteractor()
-        let viewController = ListArticleViewController()
+        let interactor = ListArticleInteractor(viewType: viewType)
+        let viewController = ListArticleViewController(sections: sections)
         interactor.view  = viewController
         interactor.router = router
         

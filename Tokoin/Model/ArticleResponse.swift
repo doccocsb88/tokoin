@@ -9,6 +9,7 @@
 import Foundation
 struct ArticleResponse: Codable {
     let status: String
-    let totalResults: Int
-    let articles: [Article]
+    let totalResults: Int?
+    let code: String?
+    let articles: [Article]?
 }
