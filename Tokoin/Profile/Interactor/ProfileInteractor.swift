@@ -8,12 +8,36 @@
 
 import Foundation
 
-class ProfileInteractor: ProfileViewOutput {
+protocol ProfileInteractorInput: class {
+    func didRegisterUser()
+}
+
+class ProfileInteractor {
     
     var view: ProfileViewInput?
+    var router: ProfileRouterInput?
+    
+    private func getCurrentUser() {
+        let user = TokoinCoreData.shared.getCurrentUser()
+        view?.didLoadContent(with: user)
+    }
+}
+
+extension ProfileInteractor: ProfileInteractorInput {
+    func didRegisterUser() {
+        let user = TokoinCoreData.shared.getCurrentUser()
+        view?.didLoadContent(with: user)
+    }
+}
+
+extension ProfileInteractor: ProfileViewOutput {
+
     
     func viewDidLoad() {
-//        let user = User(username: "vuvanhai")
-//        view?.didLoadContent(with: user)
+       getCurrentUser()
+    }
+    
+    func tappedRegisterButton() {
+        router?.showRegisterViewController()
     }
 }

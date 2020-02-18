@@ -10,6 +10,10 @@ import Foundation
 import CoreData
 import UIKit
 class TokoinCoreData {
+    enum Keys {
+        static let currentUserName: String = "current_username"
+    }
+    static let shared = TokoinCoreData()
     
     func saveUser(username: String, sections: [String]) {
        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -25,17 +29,20 @@ class TokoinCoreData {
             preferences.append(preference)
         }
         user.preferences = NSSet(array: preferences)
+        let userDefault = UserDefaults.standard
+        userDefault.set(username, forKey: Keys.currentUserName)
         do {
             try managedContext.save()
             
         } catch let error as NSError {
+            userDefault.removeObject(forKey: Keys.currentUserName)
             print("Error \(error)")
         }
     }
     
     
-    func getUser(by username: String) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    func getUser(by username: String) -> User? {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil}
         let managedContext = appDelegate.persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
@@ -52,8 +59,16 @@ class TokoinCoreData {
                     }
                 }
             }
+            return result.first
         } catch {
             print("Error")
         }
+        return nil
+    }
+    
+    func getCurrentUser() -> User? {
+        let userDefault = UserDefaults.standard
+        guard let username = userDefault.string(forKey: Keys.currentUserName) else { return nil }
+        return getUser(by: username)
     }
 }

@@ -12,7 +12,6 @@ import UIKit
 class TokoinTabbarController: UITabBarController {
     
     let sections:[String] = ["bitcoin", "apple", "earthquake", "animal"]
-    let profileRouter = ProfileBuilder().build()
 
     private lazy var tabbarControllers: [UIViewController] = {
         let router = ListArticleBuilder().build()
@@ -31,8 +30,11 @@ class TokoinTabbarController: UITabBarController {
         let profileItem = UITabBarItem()
         profileItem.title = "Profile"
         profileItem.image = UIImage(named: "profile_icon")
+        let profileNavigation = UINavigationController()
+        let profileRouter = ProfileBuilder().build()
+        profileNavigation.viewControllers = [profileRouter.viewController]
         profileRouter.viewController.tabBarItem = profileItem
-        return [navigationController, sectionNavigationController, profileRouter.viewController]
+        return [navigationController, sectionNavigationController, profileNavigation]
     }()
     
     override func viewDidLoad() {

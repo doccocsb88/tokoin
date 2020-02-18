@@ -84,7 +84,7 @@ enum APIRouter: URLRequestConvertible {
         case .fetchHeadLine(let country, let category, let page, let pageSize):
             var headLinePath = "top-headlines?country=\(country)"
             if let cat = category {
-                headLinePath.append("&category=c")
+                headLinePath.append("&category=\(cat)")
             }
             if let page = page {
                 headLinePath.append("&page=\(page)")

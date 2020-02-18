@@ -14,6 +14,13 @@ extension UIView {
     func forAutoLayout() {
         self.translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    func rounded(color: UIColor = .darkGray, radius: CGFloat = 4, borderWidth: CGFloat = 1) {
+        layer.cornerRadius = radius
+        layer.borderColor = color.cgColor
+        layer.borderWidth = borderWidth
+        layer.masksToBounds = true
+    }
 }
 
 extension UIImageView {
