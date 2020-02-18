@@ -9,6 +9,8 @@
 import Foundation
 import CoreData
 import UIKit
+import RxSwift
+
 class TokoinCoreData {
     enum Keys {
         static let currentUserName: String = "current_username"
@@ -66,9 +68,17 @@ class TokoinCoreData {
         return nil
     }
     
-    func getCurrentUser() -> User? {
-        let userDefault = UserDefaults.standard
-        guard let username = userDefault.string(forKey: Keys.currentUserName) else { return nil }
-        return getUser(by: username)
+    func getCurrentUser() -> Observable<User?> {
+        return Observable<User?>.create { [weak self] observer in
+            guard let this = self else { return Disposables.create()}
+            let userDefault = UserDefaults.standard
+            var user: User? = nil
+            if let username = userDefault.string(forKey: Keys.currentUserName) {
+                user =  this.getUser(by: username)
+            }
+            observer.onNext(user)
+            observer.onCompleted()
+            return Disposables.create()
+        }
     }
 }

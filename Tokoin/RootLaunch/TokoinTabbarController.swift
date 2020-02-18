@@ -17,14 +17,18 @@ class TokoinTabbarController: UITabBarController {
         let router = ListArticleBuilder().build()
         
         let headLineItem = UITabBarItem()
-        headLineItem.title = "News"
+        headLineItem.title = "HeadLines"
         headLineItem.image = UIImage(named: "home_icon")
         let navigationController = UINavigationController()
         navigationController.viewControllers = [router.viewController]
         router.viewController.tabBarItem = headLineItem
         
+        let sectionItem = UITabBarItem()
+        sectionItem.title = "News"
+        sectionItem.image = UIImage(named: "news_icon")
         let sectionRouter = ListArticleBuilder().build(viewType: .news, with: sections)
         let sectionNavigationController = UINavigationController()
+        sectionRouter.viewController.tabBarItem = sectionItem
         sectionNavigationController.viewControllers = [sectionRouter.viewController]
         
         let profileItem = UITabBarItem()

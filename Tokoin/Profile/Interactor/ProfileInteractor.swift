@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol ProfileInteractorInput: class {
     func didRegisterUser()
@@ -16,17 +17,21 @@ class ProfileInteractor {
     
     var view: ProfileViewInput?
     var router: ProfileRouterInput?
+    private let disposeBag = DisposeBag()
     
     private func getCurrentUser() {
-        let user = TokoinCoreData.shared.getCurrentUser()
-        view?.didLoadContent(with: user)
+      TokoinCoreData.shared.getCurrentUser()
+        .observeOn(MainScheduler.instance)
+        .subscribe(onNext: {[weak self] user in
+          guard let this = self else { return }
+            this.view?.didLoadContent(with: user)
+        }).disposed(by: disposeBag)
     }
 }
 
 extension ProfileInteractor: ProfileInteractorInput {
     func didRegisterUser() {
-        let user = TokoinCoreData.shared.getCurrentUser()
-        view?.didLoadContent(with: user)
+        getCurrentUser()
     }
 }
 
