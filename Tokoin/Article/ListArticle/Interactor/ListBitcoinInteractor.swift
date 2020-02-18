@@ -27,12 +27,13 @@ class ListArticleInteractor: ListArticleOutput {
     private var response: ArticleResponse?
     private var currentPage: Int = 1
     private var isLoading: Bool = false
-    
+
     init(viewType: ViewType = .headLine) {
         self.viewType = viewType
     }
     
     func viewDidLoad() {
+        listenToSectionsChanged()
         fetchArticles()
     }
     
@@ -57,6 +58,15 @@ class ListArticleInteractor: ListArticleOutput {
     }
     
     //MARK -
+    private func listenToSectionsChanged() {
+        guard viewType == .news else { return }
+        let listener = TokoinCoreData.shared.behaviorSubject
+        listener.subscribe(onNext: { [weak self]sections in
+            guard let this = self else { return }
+            this.view.updateFilterView(with: sections)
+            }).disposed(by: disposeBag)
+    }
+    
     private func resetParameters() {
         currentPage = 1
         response = nil

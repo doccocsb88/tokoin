@@ -15,8 +15,9 @@ class TokoinCoreData {
     enum Keys {
         static let currentUserName: String = "current_username"
     }
-    static let shared = TokoinCoreData()
     
+    static let shared = TokoinCoreData()
+    let behaviorSubject = BehaviorSubject<[String]>(value: ["bitcoin", "apple", "earthquake", "animal"])
     func saveUser(username: String, sections: [String]) {
        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -75,10 +76,15 @@ class TokoinCoreData {
             var user: User? = nil
             if let username = userDefault.string(forKey: Keys.currentUserName) {
                 user =  this.getUser(by: username)
+                if let user = user {
+                    let sections = user.preferences?.allObjects.compactMap({$0 as? Preference}).map({return $0.section})
+                    this.behaviorSubject.onNext(sections ?? [])
+                }
             }
             observer.onNext(user)
             observer.onCompleted()
             return Disposables.create()
         }
     }
+    
 }

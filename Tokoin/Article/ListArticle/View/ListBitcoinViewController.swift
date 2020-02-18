@@ -13,6 +13,7 @@ protocol ListArticleInput: class {
     func didFetchListArticle(with article: [Article])
     func clearData()
     func toggleLoadMoreView(isLoading: Bool)
+    func updateFilterView(with sections:[String])
 }
 
 protocol ListArticleOutput: class {
@@ -136,6 +137,7 @@ class ListArticleViewController: UIViewController {
     }
     
     func generateFilterView() {
+        clearSectionView()
         for i in 0 ..< sections.count {
             let section = sections[i]
             let button = UIButton()
@@ -150,6 +152,12 @@ class ListArticleViewController: UIViewController {
                 button.heightAnchor.constraint(equalToConstant: 50)
             ])
         }
+    }
+    
+    func clearSectionView() {
+        stackView.arrangedSubviews
+        .filter({ $0 is UIButton })
+        .forEach({ $0.removeFromSuperview() })
     }
     
     @objc func didSelectSection(_ button: UIButton) {
@@ -179,6 +187,11 @@ extension ListArticleViewController: ListArticleInput {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
+    }
+    
+    func updateFilterView(with sections:[String]) {
+        self.sections = sections
+        generateFilterView()
     }
 }
 
