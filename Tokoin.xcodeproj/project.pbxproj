@@ -13,10 +13,10 @@
 		2E957C7623FA2A5F00E81B70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E957C7423FA2A5F00E81B70 /* LaunchScreen.storyboard */; };
 		2E957C8123FA2A6000E81B70 /* TokoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E957C8023FA2A6000E81B70 /* TokoinTests.swift */; };
 		2E957C8C23FA2A6000E81B70 /* TokoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E957C8B23FA2A6000E81B70 /* TokoinUITests.swift */; };
-		2EE6740623FA309C00A913D2 /* ListBitcoinBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6740523FA309C00A913D2 /* ListBitcoinBuilder.swift */; };
-		2EE6740823FA30EF00A913D2 /* ListBitcoinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6740723FA30EF00A913D2 /* ListBitcoinRouter.swift */; };
-		2EE6740A23FA313D00A913D2 /* ListBitcoinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6740923FA313D00A913D2 /* ListBitcoinInteractor.swift */; };
-		2EE6740C23FA316F00A913D2 /* ListBitcoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6740B23FA316F00A913D2 /* ListBitcoinViewController.swift */; };
+		2EE6740623FA309C00A913D2 /* ListArticleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6740523FA309C00A913D2 /* ListArticleBuilder.swift */; };
+		2EE6740823FA30EF00A913D2 /* ListArticleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6740723FA30EF00A913D2 /* ListArticleRouter.swift */; };
+		2EE6740A23FA313D00A913D2 /* ListArticleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6740923FA313D00A913D2 /* ListArticleInteractor.swift */; };
+		2EE6740C23FA316F00A913D2 /* ListArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6740B23FA316F00A913D2 /* ListArticleViewController.swift */; };
 		2EE6740F23FA3C6000A913D2 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6740E23FA3C6000A913D2 /* ViewUtils.swift */; };
 		2EE6741223FA3E4D00A913D2 /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6741123FA3E4D00A913D2 /* ArticleViewCell.swift */; };
 		2EE6741523FA40C900A913D2 /* TokoinTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE6741423FA40C900A913D2 /* TokoinTabbarController.swift */; };
@@ -76,10 +76,10 @@
 		2E957C8723FA2A6000E81B70 /* TokoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E957C8B23FA2A6000E81B70 /* TokoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokoinUITests.swift; sourceTree = "<group>"; };
 		2E957C8D23FA2A6000E81B70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2EE6740523FA309C00A913D2 /* ListBitcoinBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBitcoinBuilder.swift; sourceTree = "<group>"; };
-		2EE6740723FA30EF00A913D2 /* ListBitcoinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBitcoinRouter.swift; sourceTree = "<group>"; };
-		2EE6740923FA313D00A913D2 /* ListBitcoinInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBitcoinInteractor.swift; sourceTree = "<group>"; };
-		2EE6740B23FA316F00A913D2 /* ListBitcoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBitcoinViewController.swift; sourceTree = "<group>"; };
+		2EE6740523FA309C00A913D2 /* ListArticleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListArticleBuilder.swift; sourceTree = "<group>"; };
+		2EE6740723FA30EF00A913D2 /* ListArticleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListArticleRouter.swift; sourceTree = "<group>"; };
+		2EE6740923FA313D00A913D2 /* ListArticleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListArticleInteractor.swift; sourceTree = "<group>"; };
+		2EE6740B23FA316F00A913D2 /* ListArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListArticleViewController.swift; sourceTree = "<group>"; };
 		2EE6740E23FA3C6000A913D2 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		2EE6741123FA3E4D00A913D2 /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
 		2EE6741423FA40C900A913D2 /* TokoinTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokoinTabbarController.swift; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		2EE6740123FA300000A913D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2EE6740B23FA316F00A913D2 /* ListBitcoinViewController.swift */,
+				2EE6740B23FA316F00A913D2 /* ListArticleViewController.swift */,
 				2EE6741123FA3E4D00A913D2 /* ArticleViewCell.swift */,
 				2EE6744723FB98AA00A913D2 /* LoadMoreView.swift */,
 			);
@@ -248,7 +248,7 @@
 		2EE6740223FA300800A913D2 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				2EE6740923FA313D00A913D2 /* ListBitcoinInteractor.swift */,
+				2EE6740923FA313D00A913D2 /* ListArticleInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 		2EE6740323FA301100A913D2 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
-				2EE6740523FA309C00A913D2 /* ListBitcoinBuilder.swift */,
+				2EE6740523FA309C00A913D2 /* ListArticleBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 		2EE6740423FA301C00A913D2 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				2EE6740723FA30EF00A913D2 /* ListBitcoinRouter.swift */,
+				2EE6740723FA30EF00A913D2 /* ListArticleRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -650,7 +650,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EE6740623FA309C00A913D2 /* ListBitcoinBuilder.swift in Sources */,
+				2EE6740623FA309C00A913D2 /* ListArticleBuilder.swift in Sources */,
 				2EE6741523FA40C900A913D2 /* TokoinTabbarController.swift in Sources */,
 				2EE6740F23FA3C6000A913D2 /* ViewUtils.swift in Sources */,
 				2EE6744823FB98AA00A913D2 /* LoadMoreView.swift in Sources */,
@@ -661,18 +661,18 @@
 				2EFCFFD823FBAD280017FEF7 /* TokoinCoreData.swift in Sources */,
 				2EE6742C23FAC78900A913D2 /* DetailArticleInteractor.swift in Sources */,
 				2E957C6A23FA2A5C00E81B70 /* AppDelegate.swift in Sources */,
-				2EE6740C23FA316F00A913D2 /* ListBitcoinViewController.swift in Sources */,
+				2EE6740C23FA316F00A913D2 /* ListArticleViewController.swift in Sources */,
 				2EE6741B23FA67EE00A913D2 /* Article.swift in Sources */,
 				2EE6743A23FAEC4000A913D2 /* ProfileViewController.swift in Sources */,
 				2EE6741F23FAB09A00A913D2 /* ArticleResponse.swift in Sources */,
 				2EE6741723FA5FEA00A913D2 /* APIConfiguration.swift in Sources */,
 				2EE6743E23FAED4000A913D2 /* ProfileInteractor.swift in Sources */,
 				2EE6744423FB080F00A913D2 /* InfoItemView.swift in Sources */,
-				2EE6740A23FA313D00A913D2 /* ListBitcoinInteractor.swift in Sources */,
+				2EE6740A23FA313D00A913D2 /* ListArticleInteractor.swift in Sources */,
 				2EE6742A23FAC70100A913D2 /* DetailArticleViewController.swift in Sources */,
 				2EE6743323FADA9D00A913D2 /* TokoinWebview.swift in Sources */,
 				2EE6742E23FAC7E200A913D2 /* DetailArticleRouter.swift in Sources */,
-				2EE6740823FA30EF00A913D2 /* ListBitcoinRouter.swift in Sources */,
+				2EE6740823FA30EF00A913D2 /* ListArticleRouter.swift in Sources */,
 				2EEFECF923FBC549002D438A /* RegisterViewController.swift in Sources */,
 				2EE6741923FA60A900A913D2 /* APIClient.swift in Sources */,
 				2EFCFFD623FBA94E0017FEF7 /* Tokoin.xcdatamodeld in Sources */,
